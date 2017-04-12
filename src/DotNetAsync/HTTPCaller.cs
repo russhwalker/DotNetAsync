@@ -1,18 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace DotNetAsync
 {
-    public class ApiHelper
+    public class HTTPCaller
     {
-
         private readonly string baseUri;
 
-        public ApiHelper(string baseUri)
+        public HTTPCaller(string baseUri)
         {
             this.baseUri = baseUri;
         }
@@ -39,6 +36,5 @@ namespace DotNetAsync
                 return await client.GetStringAsync(uri);
             }
         }
-
     }
 }
